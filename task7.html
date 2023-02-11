@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Задача 7</h1>
+    <p align="center">
+        З клавіатури вводяться вартість товару та кількість одиниць 3 товарів. Обчислити вартість кожного товару окремо <br>
+        та загальну вартість. Вивести чек (як у супермаркеті) використовуючи елементи розмітки.
+    </p>
+    <script>
+        //1.Вводимо необхідні данні
+        let costOfTheFirstItem  = parseFloat(prompt('Введіть вартість першого товару','грн'))
+        let costOfTheSecondItem  = parseFloat(prompt('Введіть вартість другого товару','грн'))
+        let costOfTheThirdItem  = parseFloat(prompt('Введіть вартість третього товару','грн'))
+        let quantityOfFirstItems = parseFloat(prompt('Введіть кількість одиниць першого товару','шт'))
+        let quantityOfSecondItems = parseFloat(prompt('Введіть кількість одиниць другого товару','шт'))
+        let quantityOfThirdItems = parseFloat(prompt('Введіть кількість одиниць третього товару','шт'))
+        let generalCount = (quantityOfFirstItems*costOfTheFirstItem)+(costOfTheSecondItem*quantityOfSecondItems )+(costOfTheThirdItem*quantityOfThirdItems)
+        document.write (`<table>
+<tr >
+<td align="centr"> Товар №1______________ ${costOfTheFirstItem}грн Х ${quantityOfFirstItems } шт = ${costOfTheFirstItem*quantityOfFirstItems}грн</td> 
+</tr>
+<tr>
+<td align="centr">Товар №2______________ ${costOfTheSecondItem}грн Х ${quantityOfSecondItems } шт = ${quantityOfSecondItems*quantityOfSecondItems}грн</td> 
+</tr>
+<tr>
+<td align="centr">Товар №3______________ ${costOfTheThirdItem }грн Х ${quantityOfThirdItems } шт = ${costOfTheThirdItem *quantityOfThirdItems}грн</td>
+</tr>
+<tr>
+<td align="centr">Загальна сума _________${generalCount} грн</td>
+ </tr>
+</table>
+  `)
+        
+    </script>
+</body>
+</html>
